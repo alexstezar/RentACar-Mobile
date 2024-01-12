@@ -13,5 +13,11 @@
         <ShellContent
             Title="My Cars"
             ContentTemplate="{DataTemplate local:CarEntryPage}" />
+
+        <ShellContent
+             Title="My Dealerships"
+             ContentTemplate="{DataTemplate local:DealershipEntryPage}" />
+        
+
     </TabBar>
 </Shell>

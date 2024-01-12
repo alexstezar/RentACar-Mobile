@@ -13,10 +13,14 @@ namespace RentACar_Mobile_
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
+                })
 
+            .ConfigureEssentials(essentials =>
+             {
+                 essentials.UseMapServiceToken("Akd-sGjriQ27P0AhEH5pBel2EXhdvyoGRRIH460isJVK2_wu-Jcovo1nGLPCeUy0");
+             });
 #if DEBUG
-		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

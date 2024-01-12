@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SQLiteNetExtensions.Attributes;
+using System.Diagnostics.CodeAnalysis;
 
 namespace RentACar_Mobile_.Models
 {
@@ -14,6 +15,8 @@ namespace RentACar_Mobile_.Models
         public int ID { get; set; }
         public string Name { get; set; }
         public string Adress { get; set; }
+
+        //[AllowNull]
         public string Details { get { return Name + " " + Adress; } }
 
         [OneToMany]

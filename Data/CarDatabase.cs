@@ -16,6 +16,24 @@ namespace RentACar_Mobile_.Data
         {
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Car>().Wait();
+            _database.CreateTableAsync<Dealership>().Wait();
+        }
+
+        public Task<List<Dealership>> GetDealershipsAsync() 
+        {
+            return _database.Table<Dealership>().ToListAsync();
+        }
+
+        public Task<int> SaveDealershipAsync(Dealership dealership) 
+        {
+            if (dealership.ID != 0)
+            {
+                return _database.UpdateAsync(dealership);
+            }
+            else
+            {
+                return _database.InsertAsync(dealership);
+            }
         }
 
         public Task<List<Car>> GetCarsAsync()
