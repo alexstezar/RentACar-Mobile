@@ -12,6 +12,8 @@ public partial class CarEntryPage : ContentPage
 	protected override async void OnAppearing()
 	{
 		base.OnAppearing();
+		var items = await App.Database.GetDealershipsAsync();
+
 		listView.ItemsSource = await App.Database.GetCarsAsync();
 	}
 

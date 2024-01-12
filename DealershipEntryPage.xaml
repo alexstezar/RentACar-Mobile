@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentACar_Mobile_.DealershipEntryPage"
              Title="DealershipEntryPage">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add Dealership"
-                      Clicked="OnDealershipAddedClicked"  />
-    </ContentPage.ToolbarItems>
-    <ListView x:Name="listView"
+    <StackLayout>
+        <Button Text="Add Your Favorite Dealerships"
+                Clicked="OnDealershipAddedClicked" 
+                HorizontalOptions="StartAndExpand"/>
+        <ListView x:Name="listView"
               Margin="20"
               ItemSelected="OnListViewItemSelected">
         <ListView.ItemTemplate>
@@ -17,4 +17,5 @@
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
+    </StackLayout>
 </ContentPage>

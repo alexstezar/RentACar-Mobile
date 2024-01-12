@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentACar_Mobile_.CarEntryPage"
              Title="CarEntryPage">
+    
     <StackLayout>
         <Button Text="Add Luxury Car"
                 Clicked="OnCarAddedClicked" 
@@ -10,13 +11,17 @@
         <ListView x:Name="listView"
               Margin="20"
               ItemSelected="OnListViewItemSelected">
+            
             <ListView.ItemTemplate>
+                
                 <DataTemplate>
                     <TextCell Text="{Binding Name}"
                               Detail="{Binding Description}"/>
                 </DataTemplate>
+                
             </ListView.ItemTemplate>
         </ListView>
+        
         
     </StackLayout>
 </ContentPage>

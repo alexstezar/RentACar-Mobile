@@ -18,8 +18,8 @@ namespace RentACar_Mobile_.Models
         public string Description { get; set; }
         public string Collection { get; set; }
 
-        [ForeignKey(nameof(Car))]
-        public int CarId {  get; set; }
+        [ForeignKey(nameof(Dealership))]
+        public int DealershipID {  get; set; }
          
     }
 }

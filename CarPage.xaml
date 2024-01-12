@@ -13,11 +13,16 @@
         <Editor Placeholder="Enter the type of the car you want"
                 Text="{Binding Collection}"
                 HeightRequest="100" />
+        
+
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
+            
+            <Picker x:Name="DealershipPicker" Title="Enter your dealership name"/>
+            
             <Button Text="Save"
                     Clicked="OnSaveButtonClicked" />
             <Button Grid.Column="1"

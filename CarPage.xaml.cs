@@ -12,7 +12,8 @@ public partial class CarPage : ContentPage
 	async void OnSaveButtonClicked(object sender, EventArgs e)
 	{
 		var favcar = (Car)BindingContext;
-		await App.Database.SaveCarAsync(favcar);
+        
+        await App.Database.SaveCarAsync(favcar);
 		await Navigation.PopAsync();
 	}
 
@@ -22,4 +23,6 @@ public partial class CarPage : ContentPage
 		await App.Database.DeleteCarAsync(favcar);
 		await Navigation.PopAsync();
 	}
+
+   
 }

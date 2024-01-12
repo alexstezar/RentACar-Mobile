@@ -1,3 +1,4 @@
+using Plugin.LocalNotification;
 using RentACar_Mobile_.Models;
 //using Microsoft.Maui.Devices.Sensors;
 //using Plugin.LocalNotification;
@@ -30,13 +31,25 @@ public partial class DealershipPage : ContentPage
 		var options = new MapLaunchOptions { Name = "My favorite dealership" };
 		var location = locations?.FirstOrDefault();
 
-        //await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
 
         var myLocation = await Geolocation.GetLocationAsync();
 
-        //var myLocation = new Location(46.7731796289, 23.6213886738);
 
-       // var distance = myLocation.CalculateDistance(location, DistanceUnits.Kilometers);
+        var distance = myLocation.CalculateDistance(location, DistanceUnits.Kilometers);
+        if (distance < 4)
+        {
+            var request = new NotificationRequest
+            {
+                Title = "Ai de facut cumparaturi in apropiere!",
+                Description = address,
+                Schedule = new NotificationRequestSchedule
+                {
+                    NotifyTime = DateTime.Now.AddSeconds(1)
+                }
+            };
+            await LocalNotificationCenter.Current.Show(request);
+        }
+
 
         await Map.OpenAsync(myLocation, options);
 
