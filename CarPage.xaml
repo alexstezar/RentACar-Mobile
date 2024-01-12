@@ -10,6 +10,9 @@
         <Editor Placeholder="Enter some details that you want for your luxury car"
                 Text="{Binding Description}"
                 HeightRequest="100" />
+        <Editor Placeholder="Enter the type of the car you want"
+                Text="{Binding Collection}"
+                HeightRequest="100" />
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
