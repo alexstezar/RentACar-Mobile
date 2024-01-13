@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentACar_Mobile_.CollectionEntryPage"
+             Title="CollectionEntryPage">
+
+		
+	<StackLayout>
+		<Label Text="Luxury Car Collection" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" />
+
+
+		<StackLayout Margin="20,10,0,0">
+			<Label Text="Sedan" FontSize="Medium" FontAttributes="Bold" />
+			<Label Text="A standard four-door car with separate compartments for passengers and the trunk." />
+		</StackLayout>
+
+	<StackLayout Margin="20,10,0,0">
+		<Label Text="Coupe" FontSize="Medium" FontAttributes="Bold"/>
+		<Label Text="A two-door car, often with a sportier and lower profile." />
+	</StackLayout>
+
+		<StackLayout Margin="20,10,0,0">
+			<Label Text="SUV (Sport Utility Vehicle)" FontSize="Medium" FontAttributes="Bold"/>
+			<Label Text="Designed for off-road and versatile use, SUVs come in various sizes, from compact to full-size." />
+		</StackLayout>
+
+		<StackLayout Margin="20,10,0,0">
+			<Label Text="Crossover" FontSize="Medium" FontAttributes="Bold"/>
+			<Label Text="A blend between an SUV and a sedan, often with a car chassis and features closer to a sports car." />
+		</StackLayout>
+
+		<StackLayout Margin="20,10,0,0">
+			<Label Text="Four-Door Coupe" FontSize="Medium" FontAttributes="Bold"/>
+			<Label Text="Combining the sporty appearance of a coupe with the practicality of four doors." />
+		</StackLayout>
+
+		<StackLayout Margin="20,10,0,0">
+			<Label Text="Cabriolet " FontSize="Medium" FontAttributes="Bold"/>
+			<Label Text=" A car with a retractable or detachable roof, allowing for an open-top driving experience." />
+		</StackLayout>
+
+	</StackLayout>
+</ContentPage>

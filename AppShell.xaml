@@ -24,7 +24,10 @@
              Title="My Dealerships"
              ContentTemplate="{DataTemplate local:DealershipEntryPage}" />
 
+        <ShellContent
+ Title=" Our Luxury Collections"
+ ContentTemplate="{DataTemplate local:CollectionEntryPage}"
+ />
 
-        
     </TabBar>
 </Shell>
