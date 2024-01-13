@@ -6,9 +6,15 @@
     xmlns:local="clr-namespace:RentACar_Mobile_"
     Shell.FlyoutBehavior="Disabled">
     <TabBar>
+       
+       
         <ShellContent
             Title="Home"
             ContentTemplate="{DataTemplate local:MainPage}" />
+
+        <ShellContent
+            Title="Start"
+            ContentTemplate="{DataTemplate local:StartPage}" />
 
         <ShellContent
             Title="My Cars"
@@ -17,7 +23,8 @@
         <ShellContent
              Title="My Dealerships"
              ContentTemplate="{DataTemplate local:DealershipEntryPage}" />
-        
 
+
+        
     </TabBar>
 </Shell>

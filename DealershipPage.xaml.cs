@@ -35,20 +35,20 @@ public partial class DealershipPage : ContentPage
         var myLocation = await Geolocation.GetLocationAsync();
 
 
-        var distance = myLocation.CalculateDistance(location, DistanceUnits.Kilometers);
-        if (distance < 4)
-        {
-            var request = new NotificationRequest
-            {
-                Title = "Ai de facut cumparaturi in apropiere!",
-                Description = address,
-                Schedule = new NotificationRequestSchedule
-                {
-                    NotifyTime = DateTime.Now.AddSeconds(1)
-                }
-            };
-            await LocalNotificationCenter.Current.Show(request);
-        }
+        //var distance = myLocation.CalculateDistance(location, DistanceUnits.Kilometers);
+        //if (distance < 4)
+        //{
+            //var request = new NotificationRequest
+            //{
+               // Title = "Ai de facut cumparaturi in apropiere!",
+                //Description = address,
+                //Schedule = new NotificationRequestSchedule
+                //{
+                   // NotifyTime = DateTime.Now.AddSeconds(1)
+                //}
+            //};
+            //await LocalNotificationCenter.Current.Show(request);
+        //}
 
 
         await Map.OpenAsync(myLocation, options);

@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Firebase.Auth;
+using Firebase.Auth.Providers;
+using Microsoft.Extensions.Logging;
 
 namespace RentACar_Mobile_
 {
@@ -22,6 +24,7 @@ namespace RentACar_Mobile_
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
+            
 
             return builder.Build();
         }
