@@ -26,7 +26,7 @@ namespace RentACar_Mobile_.ViewModels
 
         private async void LoginBtnTappedAsync(object obj)
         {
-            await this._navigation.PushAsync(new Dashboard());
+            await this._navigation.PushAsync(new CarEntryPage());
         }
 
         private async void RegisterBtnTappedAsync(object obj)

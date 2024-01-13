@@ -18,7 +18,7 @@
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Vrei sa impresionezi, dar nu stii cum? Contacteaza-ne!"
+                Text="Vrei sa impresionezi, dar nu stii cum? Noi avem solutia!"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
@@ -30,14 +30,29 @@
                 FontSize="18"
                 HorizontalOptions="Center" />
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Register"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-            <Button Text="Sign In"
-                    HorizontalOptions="Center" />
+            <Label
+                 Text="We're waiting for you on the Start page"
+                 FontSize="18"
+                 HorizontalOptions="Center"
+                />
+            <Grid Margin="0,50,0,0" ColumnSpacing="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+
+                </Grid.ColumnDefinitions>
+                <BoxView Grid.Column="0" HeightRequest="1" Color="Black"/>
+                <Label Grid.Column="1" Text="OR" FontSize="12" HorizontalOptions="Center"/>
+                <BoxView Grid.Column="2" HeightRequest="1" Color="Black"/>
+
+            </Grid>
+            <HorizontalStackLayout Margin="0,15,0,0" Spacing="15" HorizontalOptions="Center">
+                <Image Source="facebook.png" WidthRequest="35" HeightRequest="35"/>
+                <Image Source="google.png" WidthRequest="35" HeightRequest="35"/>
+
+            </HorizontalStackLayout>
+
 
         </VerticalStackLayout>
     </ScrollView>
