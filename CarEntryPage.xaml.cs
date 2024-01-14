@@ -9,6 +9,9 @@ public partial class CarEntryPage : ContentPage
 		InitializeComponent();
 	}
 
+
+
+
 	protected override async void OnAppearing()
 	{
 		base.OnAppearing();

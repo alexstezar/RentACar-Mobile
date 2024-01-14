@@ -4,16 +4,40 @@
              x:Class="RentACar_Mobile_.CarPage"
              Title="CarPage">
     <StackLayout Margin="20">
-        <Editor Placeholder="Enter the name of the luxury car"
-                Text="{Binding Name}"
-                HeightRequest="100" />
+
+        <Label Text="Select an Option:" />
+
+        <Picker x:Name="DropdownMenu" Title="Enter the name of the luxury car" >
+
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>BMW</x:String>
+                    <x:String>Audi</x:String>
+                    <x:String>Rolls-Royce Phantom</x:String>
+                    <x:String>Bugatti</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+                
+        </Picker>
+
+        <Label Text="Selected Option:" />
+        <Label Text="{Binding SelectedItem, Source={x:Reference DropdownMenu}, StringFormat='{}{0}'}" />
+
+       
+
         <Editor Placeholder="Enter some details that you want for your luxury car"
                 Text="{Binding Description}"
                 HeightRequest="100" />
+
+
         <Editor Placeholder="Enter the type of the car you want"
                 Text="{Binding Collection}"
                 HeightRequest="100" />
-        
+
+        <Label Text="Data si ora de preluare a echipamentului" />
+        <DatePicker Date="{Binding Data}" />
+        <TimePicker Format="HH:mm" Time="{Binding Ora}" />
+
 
         <Grid>
             <Grid.ColumnDefinitions>
@@ -22,12 +46,19 @@
             </Grid.ColumnDefinitions>
             
             <Picker x:Name="DealershipPicker" Title="Enter your dealership name"/>
+
             
+
             <Button Text="Save"
                     Clicked="OnSaveButtonClicked" />
             <Button Grid.Column="1"
                     Text="Delete"
                     Clicked="OnDeleteButtonClicked" />
         </Grid>
+
+
+        
+      
+
     </StackLayout>
 </ContentPage>
